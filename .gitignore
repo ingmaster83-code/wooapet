@@ -1,0 +1,5 @@
+scripts/_pet_raw.json
+scripts/_pet_detail.json
+__pycache__/
+*.pyc
+.env
