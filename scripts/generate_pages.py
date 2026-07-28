@@ -337,6 +337,7 @@ def index_page():
   <meta property="og:title" content="전국 반려동물 동반여행지 찾기 | 우아펫">
   <meta property="og:description" content="전국 {TOTAL:,}곳 반려동물 동반 가능 식당·숙박·관광지를 한눈에">
   <meta property="og:url" content="https://wooapet.wooahouse.com/">
+  <meta property="og:image" content="https://wooapet.wooahouse.com/og-image.png">
   <meta name="twitter:card" content="summary">
   {HEAD_STYLE}
   <link rel="stylesheet" href="css/style.css">
