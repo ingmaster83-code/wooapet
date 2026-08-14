@@ -103,6 +103,7 @@ def region_page(region, cities, depth):
     <button class="mobile-menu-btn" aria-label="메뉴">☰</button>
   </div>
 <script src="{up}js/wooa-sites-bar.js"></script>
+<script src="{up}js/ad-dev-placeholder.js"></script>
 </header>
 
 <section class="region-hero">
@@ -235,6 +236,7 @@ def city_page(region, city, records):
     <button class="mobile-menu-btn" aria-label="메뉴">☰</button>
   </div>
 <script src="../../js/wooa-sites-bar.js"></script>
+<script src="../../js/ad-dev-placeholder.js"></script>
 </header>
 
 <section class="region-hero">
@@ -366,6 +368,7 @@ def index_page():
     <button class="mobile-menu-btn" aria-label="메뉴">☰</button>
   </div>
 <script src="js/wooa-sites-bar.js"></script>
+<script src="js/ad-dev-placeholder.js"></script>
 </header>
 
 <section class="hero">
@@ -482,6 +485,7 @@ def region_index_page():
     <button class="mobile-menu-btn" aria-label="메뉴">☰</button>
   </div>
 <script src="../js/wooa-sites-bar.js"></script>
+<script src="../js/ad-dev-placeholder.js"></script>
 </header>
 <section class="hero">
   <h1>📍 지역별 반려동물 동반여행지</h1>
