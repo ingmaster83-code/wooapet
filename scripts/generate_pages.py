@@ -39,6 +39,18 @@ HEAD_STYLE = """<link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">"""
 
 
+
+# 쿠팡 파트너스 (고객 관심 기반 추천) — 콘텐츠·애드센스 아래, 페이지 최하단. 고지 문구는 푸터에 표기.
+COUPANG_HTML = '''
+<div class="coupang-partners" style="margin:36px auto 0;max-width:720px;padding:0 16px 8px;text-align:center;overflow-x:auto;">
+  <script src="https://ads-partners.coupang.com/g.js"></script>
+  <script>
+    new PartnersCoupang.G({"id":980427,"trackingCode":"AF5600192","subId":"pet","template":"carousel","width":"680","height":"140"});
+  </script>
+</div>
+'''
+COUPANG_DISCLOSURE = '    <p style="margin:6px 0 0;font-size:.7rem;opacity:.55;">이 페이지는 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>\n'
+
 def esc(s):
     return (s or "").replace("&", "&amp;").replace('"', "&quot;")
 
@@ -172,6 +184,7 @@ def region_page(region, cities, depth):
   </a>
 </div>
 
+{COUPANG_HTML}
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -179,7 +192,7 @@ def region_page(region, cities, depth):
       <div class="footer-col"><p class="footer-heading">정보</p><a href="{up}privacy.html">개인정보처리방침</a><a href="{up}">메인으로</a></div>
     </div>
     <div class="footer-bottom"><p>&copy; 2026 WooaHouse. All rights reserved.</p><p>데이터 출처: 한국관광공사 반려동물 동반여행 서비스</p></div>
-  </div>
+{COUPANG_DISCLOSURE}  </div>
 </footer>
 
 <script src="{up}js/config.js"></script>
@@ -299,6 +312,7 @@ def city_page(region, city, records):
   </a>
 </div>
 
+{COUPANG_HTML}
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -307,7 +321,7 @@ def city_page(region, city, records):
       <div class="footer-col"><p class="footer-heading">정보</p><a href="../../privacy.html">개인정보처리방침</a><a href="../../">메인으로</a></div>
     </div>
     <div class="footer-bottom"><p>&copy; 2026 WooaHouse. All rights reserved.</p><p>데이터 출처: 한국관광공사 반려동물 동반여행 서비스</p></div>
-  </div>
+{COUPANG_DISCLOSURE}  </div>
 </footer>
 
 <script src="../../js/config.js"></script>
@@ -424,6 +438,7 @@ def index_page():
   </aside>
 </div>
 
+{COUPANG_HTML}
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-grid">
@@ -432,7 +447,7 @@ def index_page():
       <div class="footer-col"><p class="footer-heading">정보</p><a href="privacy.html">개인정보처리방침</a></div>
     </div>
     <div class="footer-bottom"><p>&copy; 2026 WooaHouse. All rights reserved.</p><p>데이터 출처: 한국관광공사 반려동물 동반여행 서비스</p></div>
-  </div>
+{COUPANG_DISCLOSURE}  </div>
 </footer>
 
 <script src="js/config.js"></script>
@@ -496,10 +511,11 @@ def region_index_page():
     {cards_html}
   </div>
 </section>
+{COUPANG_HTML}
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-bottom"><p>&copy; 2026 WooaHouse. All rights reserved.</p></div>
-  </div>
+{COUPANG_DISCLOSURE}  </div>
 </footer>
 </body>
 </html>"""
